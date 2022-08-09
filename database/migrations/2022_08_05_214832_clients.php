@@ -13,18 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        //
+        Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('consultation')->nullable();
-            $table->string('1on1health coaching')->nullable();
-            $table->string('meal plans')->nullable();
-            $table->string('password');
+            $table->integer('checkinsnumber');
+            $table->foreignId('user_id');
+            $table->integer('weight');
+            $table->integer('lastweight');
+            $table->string ('goals');
+            $table->bigInteger('caloriesintake');
+            $table->string('activity');
             $table->rememberToken();
             $table->timestamps();
-        });
-    }
+    });
+}
 
     /**
      * Reverse the migrations.
@@ -33,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        //
     }
 };
