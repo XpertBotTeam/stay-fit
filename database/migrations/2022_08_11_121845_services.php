@@ -13,18 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-             $table ->string('username')->unique();
-        
-
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->bigInteger('points')->default('1');
+        //
+        Schema::create('services',function(Blueprint $table){
+           $table->id();
+           $table->foreignId('user_id');
+            $table->date('consultation');
+            $table->string('customizedmealplan');
+            $table->boolean('meallocation');
+            $table->string('healthcoaching');
+            $table->string('mealsordessert');
+            $table->string('stayfit');
+             
             $table->rememberToken();
             $table->timestamps();
+
         });
+
     }
 
     /**
@@ -34,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        //
     }
 };

@@ -1,0 +1,25 @@
+.h-10{
+    height: 5rem;
+}
+.w-10{
+    width: 5rem;
+}
+.h-1{
+    height:28rem;
+
+}
+.w-1{
+    width:43rem;
+}
+.mx-1{
+    margin-right: 11rem;
+    margin-left:  11rem;
+}
+.bg-b{
+    background-color: rgb(29, 29, 29);
+}
+.bg-i{
+
+    background-color: rgb(34, 34, 34);
+
+}

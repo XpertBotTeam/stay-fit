@@ -16,13 +16,15 @@ return new class extends Migration
         //
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->integer('checkinsnumber');
             $table->foreignId('user_id');
+            $table->integer('height');
             $table->integer('weight');
-            $table->integer('lastweight');
+            $table->integer('age');
             $table->string ('goals');
+            $table->string ('gender');
             $table->bigInteger('caloriesintake');
             $table->string('activity');
+          
             $table->rememberToken();
             $table->timestamps();
     });

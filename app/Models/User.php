@@ -19,8 +19,10 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
+       
     ];
 
     /**
@@ -32,6 +34,9 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+    public function setPasswordAttribute($password){
+        $this->attributes['password' ]=bcrypt($password);
+    }
 
     /**
      * The attributes that should be cast.
@@ -41,4 +46,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function Client(){
+        return $this->hasOne(Client::class);
+    }
 }
