@@ -141,6 +141,9 @@
   {{ $slot }}
       <!-- /End replace -->
   </div>
+  <div>
+    
+  </div>
   <link rel="stylesheet" href="/app.css">
 
 

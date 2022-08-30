@@ -8,7 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MealController;
 
-
+use App\Http\Controllers\ApiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,8 +20,11 @@ use App\Http\Controllers\MealController;
 |
 */
 Route::get('/',function(){
-    return view('components.home');
+
+
+return view('components.home');
 });
+
 Route::get('/dashboard',[ClientController::class,'show']);
 Route::get('/constultation',[ConsultationController::class,'booking']);
 
@@ -35,3 +38,7 @@ Route::get('customizedmeal',[ClientController::class,'show']);
 Route::get('client',[ClientController::class,'create']);
 Route::post('store',[ClientController::class,'store']);
 Route::get('meal',[MealController::class,'show']);
+Route::get('recipe',function(){
+return view('components.form.recipegrid');
+});
+Route::get('api',[ApiController::class,'fetch']);
