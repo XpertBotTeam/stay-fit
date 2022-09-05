@@ -15,9 +15,9 @@ class AdminController extends Controller
     //
     public function show(){
         return view('admin.dashboard',[
-            'clients'=>Client::all(),
+             'clients'=>Client::all(),
             'users'=>User::all(),
-            'infos'=>Info::all(),
+         'infos'=>Info::all(),
         ]);
     }
 }

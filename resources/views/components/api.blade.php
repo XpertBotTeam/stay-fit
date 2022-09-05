@@ -1,7 +1,3 @@
-<x-layout>
-     @foreach($food['hits'] as $recipe)
-    <h1>{{ $recipe ['recipe']['label'] }}</h1>
-    hello 
-    @endforeach
-
-</x-layout>
+<p>this is calories</p>{{ $calories['data']['BMR'] }}
+this is macros {{ $macros['data']['calorie'] }}
+this is bmi {{ $bmi['data']['bmi'] }}

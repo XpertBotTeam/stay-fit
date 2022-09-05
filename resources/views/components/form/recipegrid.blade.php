@@ -1,37 +1,11 @@
-<x-layout>
+
+@props(['recipe','image'])
 <div class="flex flex-row px-2 gap-2">
-
-
-
 <div class="rounded-lg border-zinc-500 border-2 box-border border-solid ">
     
-    <div class="p-1 "> <img src="/images/background/consultation.jpg" alt="recipe image"> 
-    recipe name
-</div>
-</div>
-<div class="rounded-lg border-zinc-500 border-2 box-border border-solid ">
-    
-    <div class="p-1 "> <img src="/images/background/consultation.jpg" alt="recipe image"> 
-    recipe name
-</div>
-</div>
-<div class="rounded-lg border-zinc-500 border-2 box-border border-solid ">
-    
-    <div class="p-1 "> <img src="/images/background/consultation.jpg" alt="recipe image"> 
-    recipe name
-</div>
-</div>
-<div class="rounded-lg border-zinc-500 border-2 box-border border-solid ">
-    
-    <div class="p-1 "> <img src="/images/background/consultation.jpg" alt="recipe image"> 
-    recipe name
-</div>
-</div>
-<div class="rounded-lg border-zinc-500 border-2 box-border border-solid ">
-    
-    <div class="p-1 "> <img src="/images/background/consultation.jpg" alt="recipe image"> 
-    recipe name
+    <div class="p-1 "> <img src="https://edamam-product-images.s3.amazonaws.com/web-img/e42/e42f9119813e890af34c259785ae1cfb.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCig9ZG4xOkZ%2FSRscKrlaNjbDP6IxpRe5t3fXqstkyxeAIhANb7NCIzQsgP6ew4EUBHVbeaS6%2BvW7KcZoLlUjIr9Z8tKtIECE4QABoMMTg3MDE3MTUwOTg2Igzo%2Bf7G4iS5b%2B%2BLa8IqrwQk2L511xhN5BqLaCdt8rXJbJ2ki4016hLY1sm957CfT64CLB8fzI0yTLKFblmXg579xnHfI7sEzl9OKxfXORBTMKiPRXP0Sc0Ty76fbtQnxO6d%2FesXcG4XdwkZwi0bhLWsBwB%2Frlz1FNFJy25DKKyKrJmznaBhi76iEakcMs5CmosbRZi1QuZjp%2FyvE8FYAvvx5k7uQZHozwVZ0vPxS1UG2RYSdzHs7v7NH10SfFXi8ZmuIWU6ArON2ca5uUQ6oD%2FjIg3E3XVwJcjTSNlq6yMhz07O%2FYu9x%2B%2BNk32CiWXHwTwamyhZbnKQtPSpapSqlWiw6An%2BoGXGVRCJsQMn%2BOh2IWxQ0o67NNi537y5spf3cUxSB6OGOExdemddGRfwt%2Bo846uAd3gHoAJbFOUPb9rg9w%2BjsNixTi3HzZjasdAuBUmLR%2BlcbZAhYku9U9CxIP12FwARYqb%2BPZAXvauBiPiYcPaIMXSaMIj3rtBKmtUsGBKV3%2FjhTWGoilLl2z0gemt5PEVsqWpUA4KXjdc7A7ewF51ctq%2BFpr9KQ5rthZ6K4BCnUnN4UTqLh%2B1HlnLw7XQqw4CEbonKyd6tcyXCZupQfjWG3zzmlI8bd1Y3OI5O5xAZQg7P6666KfA3PZpcXUt%2FMJhac%2F1FIHnRdHGjtJWPAV7NcPY8r3vWKJIusMcezh3ycCQgG70ETDqW7mIS6c1vkE%2BXgjNvk5oPBva3R2BkoTrRyDJJqWD%2FukFP52gIMOnzuZgGOqgBpkackvfeD8CTdl%2BWwPFK%2F3bz%2BxFApXAgJO0gFyjyrno9YWj0V7xbJ8ZP4NNqhrWMcvmo4d0AoczuTm%2B1LfwiQ6r6poqi3hAB%2FLTD88BmDGLsfcup3JyahYrOYDZ5ZFNm%2F7IJdFJV7VoQmpR1N6wIhaU%2BXCBSwufbH4aJOa6lHcJ33QVi7EeaxdZJBB5Sm2TeVrm33uNHT%2BLGfMv69m6ZJiuIutJSsW9W&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220830T212906Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFMZFMBHXP%2F20220830%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=5bf9fc0ea446a908df2a2eca6507d82714942328cb1809bcc58d99a944fd2e3b"
+alt="recipe image"> 
+   recipe
 </div>
 </div>
 </div>  
-</x-layout>

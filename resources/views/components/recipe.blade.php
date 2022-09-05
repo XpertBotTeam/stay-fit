@@ -1,7 +1,4 @@
 <x-layout>
-     @foreach($food['hits'] as $recipe)
-    <h1>{{ $recipe['label'] }}</h1>
-    hello 
-    @endforeach
-
+    @foreach($food['hits'] as $food)
+<x-form.recipegrid name="$food['recipe']['label']" image="$food['recipe']['image']"/>
 </x-layout>

@@ -1,11 +1,6 @@
 
 
 <x-layout>
-
-
-
-<body class="bg-white font-family-karla">
-
  
 
    

@@ -41,4 +41,4 @@ Route::get('meal',[MealController::class,'show']);
 Route::get('recipe',function(){
 return view('components.form.recipegrid');
 });
-Route::get('api',[ApiController::class,'fetch']);
+Route::get('api',[ApiController::class,'all']);
