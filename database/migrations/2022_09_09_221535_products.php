@@ -12,16 +12,17 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    { Schema::create('fdprices', function(Blueprint $table){
- $table->bigInteger('calories');
- $table->bigInteger('price');
- $table->rememberToken();
- $table->timestamps();
- 
-    });
-  
-        
+    {
         //
+        Schema::create('products',function(Blueprint $table){
+            $table->id();
+            $table->string('name');
+            $table->double('price');
+          
+            $table->string('image');
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -32,5 +33,6 @@ return new class extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('products');
     }
 };

@@ -78,6 +78,7 @@
          <x-form.button>submit</x-form.button>
        </form> 
        </div>
+      <p class="italic  mt-4 text-zinc-700 text-center">if you have an account already <a href="/login" class="text-zinc-400 hover:text-zinc-900">log in here</a></p> 
     </main>
 </section>
 

@@ -17,6 +17,7 @@ return new class extends Migration
         Schema::create('infos',function(Blueprint $table){
             $table->id();
             $table->foreignId('user_id');
+            $table->string('name');
        $table->string('address');
        $table->bigInteger('number');
        $table->bigInteger('price');

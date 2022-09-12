@@ -172,14 +172,48 @@ if ($err) {
 	return $macros;
 }
 }
+public function bodyfat(){
+	
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+	CURLOPT_URL => "https://fitness-calculator.p.rapidapi.com/bodyfat?age=25&gender=male&weight=70&height=178&neck=50&waist=96&hip=92",
+	CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_FOLLOWLOCATION => true,
+	CURLOPT_ENCODING => "",
+	CURLOPT_MAXREDIRS => 10,
+	CURLOPT_TIMEOUT => 30,
+	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	CURLOPT_CUSTOMREQUEST => "GET",
+	CURLOPT_HTTPHEADER => [
+		"X-RapidAPI-Host: fitness-calculator.p.rapidapi.com",
+		"X-RapidAPI-Key: d47bdf9affmsh640fed96af84362p121e15jsn8577b639f47b"
+	],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+$bodyfat=json_decode($response,true);
+curl_close($curl);
+
+if ($err) {
+	echo "cURL Error #:" . $err;
+} else {
+	return $bodyfat;
+}
+}
 public function all(){
 	$calories=$this->calories();
 	$bmi=$this->bmi();
 	$macros=$this->macros();
+	$bodyfat=$this->bodyfat();
+
 	return view('components.api',[
 		'calories'=>$calories,
 		'bmi'=>$bmi,
-		'macros'=>$macros
+		'macros'=>$macros,
+		'bodyfat'=>$bodyfat,
 	]);
 }
 }

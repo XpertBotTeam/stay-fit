@@ -50,7 +50,8 @@
 
             <a href="#" class="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Stay_fit</a>
             <a href="#" class="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">1:1 health coaching</a>
-            <a href="customizedmeal" class="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium " >shop</a>
+            <a href="shop" class="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium " >shop</a>
+            
           </div>
         </div>
       </div>
@@ -144,6 +145,7 @@
   <div>
     
   </div>
+      <x-flash/>
   <link rel="stylesheet" href="/app.css">
 
 

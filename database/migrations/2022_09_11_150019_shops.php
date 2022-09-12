@@ -12,14 +12,18 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    { Schema::create('mprices',function(Blueprint $table){
-   $table->string('mealordessert');
-   $table->bigInteger('price');
-   $table->rememberToken();
-   $table->timestamps();
-   
-    });
+    {
         //
+        Schema::create('shops',function(Blueprint $table){
+
+            $table->id();
+            $table->string('name');
+            $table->double('price');
+          
+            $table->string('image');
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -30,5 +34,6 @@ return new class extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('shops');
     }
 };
