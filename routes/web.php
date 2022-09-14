@@ -14,6 +14,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\StayfitController;
+use Doctrine\DBAL\Driver\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +28,12 @@ use App\Http\Controllers\StayfitController;
 */
 
 
- /*Route::get('/', function(){
+ Route::get('/', function(){
 
 
  return view('components.home');
- });*/
- Route::get('/',[StayfitController::class,'show']);
+ });
+//  Route::get('/',[StayfitController::class,'show']);
 
 Route::get('/dashboard',[ClientController::class,'show']);
 Route::get('/constultation',[ConsultationController::class,'booking']);
@@ -42,12 +43,16 @@ Route::post('register',[UserController::class,'store'])->middleware('guest');
 Route::get('login',[UserController::class,'login'])->middleware('guest');
 Route::post('sessions',[UserController::class,'logsub'])->middleware('guest');
 Route::get('logout',[UserController::class,'logout']);
-Route::get('dashboard',[AdminController::class,'show']);
+ Route::middleware('can:admin')->group(function() {
+    Route::get('dashboard',[AdminController::class,'show']);
+   });
+
+
 Route::get('customizedmeal',[ClientController::class,'show']);
 Route::get('consultation',[ConsultationController::class,'show']);
 Route::get('client',[ClientController::class,'create']);
 Route::post('store',[ClientController::class,'store']);
-Route::get('/meal', [MealController::class, 'show'])->name('products.list');
+Route::get('meal', [MealController::class, 'show'])->name('products.list');
 Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
 Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
 Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
@@ -57,6 +62,13 @@ Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear'
 Route::get('address',[AddressController::class,'show']);
 Route::get('recipe',function(){
 return view('components.form.recipegrid');
+
 });
+//here we used exercice db api to see exercice for each muscle
+
+
+Route::get('stayfit',[StayfitController::class,'show']); 
+Route::get('/{muscle}',[StayfitController::class,'exercices']);
+
 Route::get('shop',[ShopController::class,'show']);
 Route::get('api',[ApiController::class,'all']); 
