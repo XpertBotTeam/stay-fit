@@ -9,7 +9,9 @@ class ShopController extends Controller
     //
     public function show(){
          $shops=Shop::all();
-        return view('components.shop',compact('shops'));
+        return view('components.shop',[
+'shops'=>$shops
+        ]);
     }
    
 }

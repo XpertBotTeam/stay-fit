@@ -8,6 +8,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MealController;
+use App\Models\Shop;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\CartController;
@@ -65,10 +66,10 @@ return view('components.form.recipegrid');
 
 });
 //here we used exercice db api to see exercice for each muscle
-
+Route::get('shop',[ShopController::class,'show']);
 
 Route::get('stayfit',[StayfitController::class,'show']); 
 Route::get('/{muscle}',[StayfitController::class,'exercices']);
 
-Route::get('shop',[ShopController::class,'show']);
+
 Route::get('api',[ApiController::class,'all']); 

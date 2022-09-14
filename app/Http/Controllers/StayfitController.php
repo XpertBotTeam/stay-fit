@@ -66,13 +66,13 @@ if ($err) {
  }
  public function exercices($muscle){
 
+$muscleobj=Muscle::where('muscle','like',$muscle)->first();
 
-
-
+$musclelink=$muscleobj->link;
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://exercisedb.p.rapidapi.com/exercises/bodyPart/$muscle",
+	CURLOPT_URL => "https://exercisedb.p.rapidapi.com/exercises/bodyPart/$musclelink",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
