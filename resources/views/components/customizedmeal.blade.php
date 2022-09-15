@@ -32,8 +32,13 @@
    
                     </div>
      <div class="ml-40 py-2">
-<a href="client" class="rounded-full text-white italic hover:bg-gray-500 m-2 px-5 py-3 font-bold">Let's start</a>
-     </div>
+@auth
+     <a href="client" class="rounded-full text-white italic hover:bg-gray-500 m-2 px-5 py-3 font-bold">Let's start</a>
+   
+     @else 
+     <a href="register" class="rounded-full text-white italic hover:bg-gray-500 m-2 px-5 py-3 font-bold">Let's start</a>
+    @endauth
+    </div>
                     </div>
                   
                     

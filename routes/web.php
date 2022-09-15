@@ -16,7 +16,7 @@ use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\StayfitController;
 use Doctrine\DBAL\Driver\Middleware;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,11 +29,8 @@ use Doctrine\DBAL\Driver\Middleware;
 */
 
 
- Route::get('/', function(){
-
-
- return view('components.home');
- });
+ Route::get('/', [HomeController::class,'show']);
+ Route::get('home2', [HomeController::class,'show2']);
 //  Route::get('/',[StayfitController::class,'show']);
 
 Route::get('/dashboard',[ClientController::class,'show']);

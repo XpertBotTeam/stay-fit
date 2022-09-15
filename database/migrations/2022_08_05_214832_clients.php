@@ -22,8 +22,8 @@ return new class extends Migration
             $table->integer('age');
             $table->string ('goals');
             $table->string ('gender');
-            $table->bigInteger('caloriesintake');
-            $table->string('activity');
+            $table->bigInteger('caloriesintake')->default("0");
+            $table->string('activity')->default('DK');
           
             $table->rememberToken();
             $table->timestamps();
