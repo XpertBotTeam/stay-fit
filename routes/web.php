@@ -13,10 +13,13 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\HealthController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\StayfitController;
 use Doctrine\DBAL\Driver\Middleware;
 use App\Http\Controllers\HomeController;
+use Faker\Provider\ar_EG\Address;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,8 +52,9 @@ Route::get('logout',[UserController::class,'logout']);
 Route::get('customizedmeal',[ClientController::class,'show']);
 Route::get('consultation',[ConsultationController::class,'show']);
 Route::get('client',[ClientController::class,'create']);
-Route::post('store',[ClientController::class,'store']);
+Route::post('client',[ClientController::class,'store']);
 Route::get('meal', [MealController::class, 'show'])->name('products.list');
+Route::post('address',[AddressController::class,'submit']);
 Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
 Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
 Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
@@ -62,11 +66,17 @@ Route::get('recipe',function(){
 return view('components.form.recipegrid');
 
 });
-//here we used exercice db api to see exercice for each muscle
+Route::get('healthcoaching',[HealthController::class,'show']);
+Route::get('meeting',[HealthController::class,'infoshow']);
+Route::post('meeting',[HealthController::class,'submit']);
+Route::get('package',[MealController::class,'showpackage']);
+Route::post('package',[AddressController::class,'submit']);
+Route::get('consultation',[HealthController::class,'showcons']);
+
 Route::get('shop',[ShopController::class,'show']);
 
 Route::get('stayfit',[StayfitController::class,'show']); 
-Route::get('/{muscle}',[StayfitController::class,'exercices']);
+Route::get('exercices/{muscle}',[StayfitController::class,'exercices']);
 
 
 Route::get('api',[ApiController::class,'all']); 

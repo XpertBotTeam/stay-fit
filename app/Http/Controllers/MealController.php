@@ -19,4 +19,8 @@ class MealController extends Controller
 
         ]);
     }
+    public function showpackage(){
+        return view('components.package');
+
+    }
 }

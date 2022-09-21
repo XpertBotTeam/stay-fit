@@ -12,20 +12,18 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
+    { Schema::create('meetings',function( Blueprint $table){
+     $table->id();
+     $table->foreignId('user_id');
+        $table->string('number');
+     $table->string('email');
+     $table->string('place');
+     $table->string('time');
+     $table->string('meeting');
+     $table->rememberToken();
+     $table->timestamps();
+    });
         //
-        Schema::create('infos',function(Blueprint $table){
-            $table->id();
-      $table->foreignId('user_id');
-            $table->string('name');
-       $table->string('address');
-       $table->bigInteger('number');
-    //    $table->bigInteger('price');
-        
-       $table->rememberToken();
-       $table->timestamps();
-       
-        });
     }
 
     /**

@@ -32,29 +32,28 @@
   
     <div class="flex flex-row gap-4 ml-10  mb-10 mt-5"> 
 
-<a href=" {{ $chest->link }}">  <div class="flex flex-col ">
+<a href="exercices/{{ $chest->link }}">  <div class="flex flex-col ">
 <div class="h-42 w-56"> <img src="{{ $chest->image }}" alt=""> </div>
 <div class="pl-8 text-blue-700 italic"> {{ $chest->muscle }}</div>
  </div>
 </a>   
-<a href=" {{ $back->link }}">  <div class="flex flex-col ">
+<a href=" exercices/{{ $back->link }}">  <div class="flex flex-col ">
 <div class="h-42 w-56"> <img src="{{ $back->image }}" alt=""> </div>
 <div class="pl-8 text-blue-700 italic"> {{ $back->muscle }}</div>
  </div>
 </a> 
-
-<a href=" {{ $shoulders->link }}">  <div class="flex flex-col ">
+<a href="exerices/{{ $shoulders->link }}">  <div class="flex flex-col ">
 <div class="h-42 w-56"> <img src="{{ $shoulders->image }}" alt=""> </div>
 <div class="pl-8 text-blue-700 italic"> {{ $shoulders->muscle }}</div>
  </div>
 </a>  
 
-<a href=" {{ $abs->link }}">  <div class="flex flex-col ">
+<a href=" exercices/{{ $abs->link }}">  <div class="flex flex-col ">
 <div class="h-42 w-56"> <img src="{{ $abs->image }}" alt=""> </div>
 <div class="pl-8 text-blue-700 italic"> {{ $abs->muscle }}</div>
  </div>
 </a>  
-<a href=" {{ $cardio->link }}">  <div class="flex flex-col ">
+<a href=" exercices/{{ $cardio->link }}">  <div class="flex flex-col ">
 <div class="h-42 w-56"> <img src="{{ $cardio->image }}" alt=""> </div>
 <div class="pl-8 text-blue-700 italic"> {{ $cardio->muscle }}</div>
  </div>
@@ -66,13 +65,13 @@
 
 <div class="flex flex-row gap-4 ml-10  mb-10 mt-5"> 
 
-<a href=" {{ $upperarms->link }}">  <div class="flex flex-col ">
+<a href=" exercices/{{ $upperarms->link }}">  <div class="flex flex-col ">
 <div class="h-42 w-56"> <img src="{{ $upperarms->image }}" alt=""> </div>
 <div class="pl-8 text-blue-700 italic"> {{ $upperarms->muscle }}</div>
  </div>
 </a>  
 
-<a href=" {{ $lowerarms->link }}">  <div class="flex flex-col ">
+<a href=" exercices/{{ $lowerarms->link }}">  <div class="flex flex-col ">
 <div class="h-42 w-56"> <img src="{{ $lowerarms->image }}" alt=""> </div>
 <div class="pl-8 text-blue-700 italic"> {{ $lowerarms->muscle }}</div>
  </div>
@@ -80,13 +79,13 @@
 
 
 
-<a href=" {{ $upperlegs->link }}">  <div class="flex flex-col ">
+<a href=" exercices/{{ $upperlegs->link }}">  <div class="flex flex-col ">
 <div class="h-42 w-56"> <img src="{{ $upperlegs->image }}" alt=""> </div>
 <div class="pl-8 text-blue-700 italic"> {{ $upperlegs->muscle }}</div>
  </div>
 </a>  
 
-<a href=" {{ $lowerlegs->link }}">  <div class="flex flex-col ">
+<a href=" exercices/{{ $lowerlegs->link }}">  <div class="flex flex-col ">
 <div class="h-42 w-56"> <img src="{{ $lowerlegs->image }}" alt=""> </div>
 <div class="pl-8 text-blue-700 italic"> {{ $lowerlegs->muscle }}</div>
  </div>

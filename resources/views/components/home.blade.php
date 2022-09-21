@@ -6,7 +6,7 @@
    
 <header class="w-full container mx-auto">
                     <div class="flex flex-col items-center py-12">
-                        <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+                        <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="https://www.agegracefullyamerica.com/community-blog">
                             Health Blog
                         </a>
                         <p class="text-lg text-gray-600">
@@ -31,7 +31,7 @@
                     <p href="#" class="text-sm pb-3">
                         By <a href="#" class="font-semibold hover:text-gray-800">{{ $blog['author'] }}</a>,{{ $blog['publishedAt'] }}
                     </p>
-                    <a href="#" class="pb-6">{{ $blog['content'] }}</a>
+                    <a href="{{ $blog['url'] }}" class="pb-6">{{ $blog['content'] }}</a>
                     <a href="{{ $blog['url'] }}" class="uppercase text-gray-800 hover:text-black">Continue Reading <i class="fas fa-arrow-right"></i></a>
                 </div>
             </article>

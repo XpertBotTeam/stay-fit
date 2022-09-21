@@ -64,6 +64,7 @@ if ($err) {
 
 
  }
+ 
  public function exercices($muscle){
 
 $muscleobj=Muscle::where('muscle','like',$muscle)->first();

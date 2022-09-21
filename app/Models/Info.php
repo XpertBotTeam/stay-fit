@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Info extends Model
 {
     use HasFactory;
-    public function user(){
+    public function User(){
         return $this->belongsTo(User::class,'user_id');
     }
 }

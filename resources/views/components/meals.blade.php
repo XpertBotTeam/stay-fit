@@ -29,14 +29,19 @@
                      </div>
                     
                     </div >
+                   @auth
                     <div class="flex flex-row mt-3">
                      <div class="mt-100 mx-64 mb-5   ">
-               <a href="" class="rounded-full px-5 py-3 font-bold bg-blue-800 ml-32  text-slate-400 hover:text-white  hover:bac"> Subscribe now!</a>
+               <a href="package" class="rounded-full px-5 py-3 font-bold bg-blue-800 ml-32  text-slate-400 hover:text-white  hover:bac"> Subscribe now!</a>
                     </div>
                     </div>
-                    
-            
+                    @else
+                      <div class="flex flex-row mt-3">
+                     <div class="mt-100 mx-64 mb-5   ">
+               <a href="/register" class="rounded-full px-5 py-3 font-bold bg-blue-800 ml-32  text-slate-400 hover:text-white  hover:bac"> Subscribe now!</a>
                     </div>
+                    </div>
+            @endauth
                     
                     </div>
                    <div class="flex flex-col bg-slate-100">

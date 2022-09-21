@@ -22,6 +22,7 @@ return view('register.create');
     }
 
    public function store(){
+    
     $attributes=request()->validate([
         'name'=>'required|max:255',
         'username'=>'required|max:255|unique:users,username',
